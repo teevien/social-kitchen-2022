@@ -1,0 +1,193 @@
+.event-details {
+    margin: 25px 0;   
+}
+
+.event-details__container {
+    display: flex;
+    align-items: flex-start;
+
+    @media (max-width: 786px) {
+        flex-direction: column;
+    }
+
+    .event-details-aside {
+        width: 300px;
+        background: hsla(0, 0%, 67.5%, .1);
+        margin-right: 30px;
+        padding: 10px;
+        border-radius: 6px;
+
+        @media (max-width: 786px) {
+            width: 100%;
+        }
+
+        .event-details-aside__title {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .event-details-aside__creator,
+        .event-details-aside__date {
+            font-size: 1.8rem;
+            margin: 0;
+
+            span {
+                display: block;
+                margin-top: 15px;
+                font-weight: 700;
+            }
+        }
+
+
+    }
+}
+
+.event-details-main {
+    width: calc(100% - 330px);
+
+    @media (max-width: 786px) {
+        width: 100%;
+    }
+
+    .event-details-main-nav__list {
+        margin-top: 0;
+        padding: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .event-details-main-nav__item {
+            margin: 0 5px;
+
+            .event-details-main-nav__button {
+                color: #333;
+                text-transform: uppercase;
+                font-size: 2.4rem;
+                font-weight: 700;
+                text-shadow: 3px 3px 1px rgb(51 51 51 / 20%);
+                text-align: center;
+                background: none;
+                border: none
+            }
+        }
+    }
+}
+
+.dish-list {
+    margin-top: 25px;
+    .dish-list__dish {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #333;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 6px;
+    }
+
+    .dish-list__link {
+        text-decoration: none;
+        flex: 1 0 auto;
+        padding: 20px;
+        color: #333;
+    }
+
+    .dish-list__delete-button {
+        font-weight: 700;
+        font-size: 2rem;
+        color: #333;
+        background-color: #efba3d;
+        border-radius: 6px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color .5s, background-color .5s;
+        border: 2px solid #333;
+        font-size: 1.4rem;
+        padding: 0;
+        margin-right: 20px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.event__delete-button {
+    font-weight: 700;
+        font-size: 2rem;
+        color: #333;
+        background-color: #efba3d;
+        border-radius: 6px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color .5s, background-color .5s;
+        border: 2px solid #333;
+        font-size: 1.4rem;
+        padding: 0;
+        margin-right: 20px;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+}
+
+// MEDIA QUERIES
+
+@media (max-width: 755px) {
+    .eventDishName {
+    @include dishList($accentColor);
+    font-size: 1.8rem;
+    }
+    .commentPost {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 715px) {
+    .eventDetailsSection {
+    background: rgba(172,172,172,0.1);
+    position: static;
+    display: block;
+    float: none;
+    width: 100%;
+    border-radius: 6px;
+    margin-right: 0px;
+    max-width: 700px;
+    top: 0;
+    }
+
+    .event__main {
+        float: none;
+        width: 100%;
+    }
+
+    .eventDishName {
+    @include dishList($accentColor);
+    font-size: 1.8rem;
+    text-decoration: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .eventDetailsSection-wrapper {
+        padding: 20px 5px;
+    }
+}
+
+@media (max-width: 420px) {
+    .eventDetails--title {
+        @include mainHeadings;
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .eventDetailsSection-wrapper {
+    padding: 20px 15px;
+    }
+}

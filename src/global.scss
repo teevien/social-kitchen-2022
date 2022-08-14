@@ -1,0 +1,47 @@
+html {
+ font-size: 62.5%;
+ height: 100%;
+}
+body {
+ font-size: 1.8rem;
+ font-family: $primaryFont;
+ letter-spacing: 0.5px;
+ height: 100%;
+ background: $secondaryColor;
+}
+
+.App {
+  background: $secondaryColor;
+}
+
+h1 {
+ @include appName;
+}
+.wrapper {
+ max-width: 1280px;
+ width: 80%;
+ margin: 0 auto;
+ @media (max-width: 900px) {
+  width: 90%;
+ }
+}
+img {
+ max-width: 100%;
+ display: block;
+}
+input, button {
+ border-radius: 6px;
+ border: 1px solid $primaryColor;
+ padding: 10px 30px;
+}
+
+h2 {
+ @include mainHeadings;
+}
+li {
+ @include recipeList;
+}
+
+button, input[type="submit"] {
+  cursor: pointer;
+}

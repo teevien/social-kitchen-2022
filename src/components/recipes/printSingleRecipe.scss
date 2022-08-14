@@ -1,0 +1,10 @@
+.btn__add--searchRecipe, .searchRecipeLink {
+    transition:0.5s;
+    @include linkButton;
+    border: 1px solid $primaryColor;
+    margin-right: 15px;
+}
+
+.btn__add--searchRecipe:hover, .searchRecipeLink:hover {
+    @include hoverButton;
+}

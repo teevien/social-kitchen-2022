@@ -1,0 +1,20 @@
+.coolbutton {
+    transition:0.5s;
+    @include linkButton;
+    border: 1px solid $primaryColor;
+    margin: 10px 0;
+}
+
+.coolbutton:hover {
+    @include hoverButton;
+}
+
+.recipe-list {
+    margin-top: 3rem;
+}
+
+.searchRecipe--card {
+    border: 1px solid $primaryColor;
+    padding: 15px;
+    border-radius: 6px;
+}
